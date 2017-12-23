@@ -8,8 +8,21 @@ namespace ToDoConsole
 {
    public class ToDo
     {
-        public string Name { set; get; }
-        public string Description { set; get; }       
+        public int Index { set; get; }
+        public List<string> ListDes { set; get; }       
         public bool IsDone { set; get; }
+        public int Caunt { set; get; }
+        public void ShowList(List<string> ls)
+        {
+            foreach(string x in ls)
+            {
+                Console.WriteLine(x);
+            }
+        }
+        public void AddDes(List<string> list, string description)
+        {
+            list.Add(description);
+        }
+       // public void ChangeColore()
     }
 }
